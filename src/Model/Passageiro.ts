@@ -15,16 +15,16 @@ export class Passageiro {
         this.status = status;
     }
 
-    public creditarMilhas(valor: number): void {
-        this.cartaoMilha.creditarMilhas(valor);
-        console.log(`${valor} milhas creditadas para o passageiro ${this.nome}, total: ${this.cartaoMilha.getTotalMilhas()}`);
+    public creditoMilha(reserva: Reserva): void {
+        this.cartaoMilha.creditarMilhas(reserva.getMilhas());
+        console.log(`${reserva.getMilhas()} milhas creditadas para o passageiro ${this.nome}, total: ${this.cartaoMilha.getTotalMilhas()}`);
     }
 
-    public consumirMilhas(valor: number): void {
-        const retorno: boolean = this.cartaoMilha.consumirMilhas(valor);
+    public consumoMilha(reserva: Reserva): void {
+        const retorno: boolean = this.cartaoMilha.consumirMilhas(reserva.getMilhas());
 
         if (retorno) { 
-            console.log(`${valor} milhas consumidas do passageiro ${this.nome}, total: ${this.cartaoMilha.getTotalMilhas()}`);
+            console.log(`${reserva.getMilhas()} milhas consumidas do passageiro ${this.nome}, total: ${this.cartaoMilha.getTotalMilhas()}`);
         } else {
             console.log(`Não há milhas suficientes para o consumo.`);
         }

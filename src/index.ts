@@ -1,7 +1,6 @@
 import { Aeroporto } from "./Model/Aeroporto.js";
 import { CompanhiaAerea } from "./Model/CompanhiaAerea.js";
 import { ContaMilha } from "./Model/ContaMilha.js";
-import { Embarque } from "./Model/Embarque.js";
 import { Passageiro } from "./Model/Passageiro.js";
 import { Reserva } from "./Model/Reserva.js";
 import { Time } from "./Model/Time.js";
@@ -20,9 +19,9 @@ const passageiro3: Passageiro = new Passageiro("Tonyzito", "T09080706", contaMil
 // console.log(passageiro3);
 
 const companhiaAerea1: CompanhiaAerea = new CompanhiaAerea("Azul", "001");
-const companhiaAerea2: CompanhiaAerea = new CompanhiaAerea("Tam", "002");
-
 const aeroporto1: Aeroporto = new Aeroporto("001", "aeroporto muito legal", "Brazil", 30, companhiaAerea1);
+
+const companhiaAerea2: CompanhiaAerea = new CompanhiaAerea("Tam", "002");
 const aeroporto2: Aeroporto = new Aeroporto("002", "segundo melhor aeroporto", "França", 15000, companhiaAerea2);
 
 const dataVoo: Date = new Date(2024, 4, 20);
