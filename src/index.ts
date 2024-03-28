@@ -19,11 +19,12 @@ console.log(passageiro3);
 const dataVoo: Date = new Date(2024, 4, 20);
 console.log(dataVoo);
 
+// const tempoVoo: Date = new Date(); 
 const voo1 = new Voo(1, 500); //não soube lidar com o tipo Time, substitui por number pra testar -> precisa arrumar
 
 const reservaPassageiro1: Reserva = voo1.fazerReserva(dataVoo, passageiro1);
 
-//reservaPassageiro1.reservar();
+// reservaPassageiro1.reservar();
 reservaPassageiro1.pagar();
 passageiro1.creditoMilha(500);
 

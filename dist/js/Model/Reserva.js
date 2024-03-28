@@ -9,18 +9,18 @@ export class Reserva {
     }
     static reservar(data, passageiro, voo) {
         const reserva = new Reserva(data, passageiro, voo);
-        console.log("Voo reservado para a data " + reserva.data.toLocaleDateString());
+        console.log(`Voo reservado para a data ${reserva.data.toLocaleDateString()}`);
         return reserva;
     }
     pagar() {
-        console.log("Voo pago");
+        console.log(`Voo pago`);
     }
     cancelar() {
-        console.log("Voo cancelado");
+        console.log(`Voo cancelado`);
     }
     alterar(dataNova) {
         this.data = dataNova;
-        console.log("Voo alterado para " + this.data.toLocaleDateString());
+        console.log(`Voo alterado para ${this.data.toLocaleDateString()}`);
     }
     getData() {
         return this.data;

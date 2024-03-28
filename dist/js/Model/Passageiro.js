@@ -20,7 +20,7 @@ export class Passageiro {
             console.log(`${valor} milhas consumidas do passageiro ${this.nome}, total: ${this.cartaoMilha.getTotalMilhas}`);
         }
         else {
-            console.log("Não há milhas suficientes para o consumo.");
+            console.log(`Não há milhas suficientes para o consumo.`);
         }
     }
     getNome() {

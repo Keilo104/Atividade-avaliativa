@@ -8,19 +8,19 @@ export class Embarque {
         this.tempo = tempo;
     }
     iniciarCheckIn() {
-        console.log("Check-in no portão " + this.portaoEmbarque + " foi iniciado.");
+        console.log(`Check-in no portão ${this.portaoEmbarque} foi iniciado.`);
     }
     pararCheckIn() {
-        console.log("Check-in no portão " + this.portaoEmbarque + " foi finalizado.");
+        console.log(`Check-in no portão ${this.portaoEmbarque} foi finalizado.`);
     }
     atrasarVoo() {
-        console.log("O voo programado para " + this.data.toLocaleDateString() + " está atrasado.");
+        console.log(`O voo programado para ${this.data.toLocaleDateString()} está atrasado.`);
     }
     finalizarVoo() {
-        console.log("O voo para a data " + this.data.toLocaleDateString() + " foi finalizado.");
+        console.log(`O voo para a data ${this.data.toLocaleDateString()} foi finalizado.`);
     }
     embarcarPassageiro(passageiro) {
-        console.log(passageiro.getNome() + " está embarcando no voo.");
+        console.log(`${passageiro.getNome()} está embarcando no voo.`);
     }
     getPortaoEmbarque() {
         return this.portaoEmbarque;
