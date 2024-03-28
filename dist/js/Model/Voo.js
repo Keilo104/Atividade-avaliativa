@@ -1,3 +1,4 @@
+import { Reserva } from "./Reserva";
 export class Voo {
     tempo;
     milhas;
@@ -10,5 +11,9 @@ export class Voo {
     }
     getMilhas() {
         return this.milhas;
+    }
+    fazerReserva(data, passageiro) {
+        const reserva = Reserva.reservar(data, passageiro, this);
+        return reserva;
     }
 }

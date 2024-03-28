@@ -1,10 +1,16 @@
 export class Reserva {
     data;
-    constructor(data) {
+    passageiro;
+    voo;
+    constructor(data, passageiro, voo) {
         this.data = data;
+        this.passageiro = passageiro;
+        this.voo = voo;
     }
-    reservar() {
-        console.log("Voo reservado para a data " + this.data.toLocaleDateString());
+    static reservar(data, passageiro, voo) {
+        const reserva = new Reserva(data, passageiro, voo);
+        console.log("Voo reservado para a data " + reserva.data.toLocaleDateString());
+        return reserva;
     }
     pagar() {
         console.log("Voo pago");

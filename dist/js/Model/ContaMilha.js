@@ -13,10 +13,9 @@ export class ContaMilha {
     consumirMilhas(valor) {
         if (this.totalMilhas >= valor) {
             this.totalMilhas -= valor;
+            return true;
         }
-        else {
-            console.log("Não há milhas suficientes para o consumo.");
-        }
+        return false;
     }
     getNumero() {
         return this.numero;
