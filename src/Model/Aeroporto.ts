@@ -1,4 +1,4 @@
-import { CompanhiaAerea } from "./CompanhiaAerea";
+import { CompanhiaAerea } from "./CompanhiaAerea.js";
 
 export class Aeroporto {
     private sigla: string;
