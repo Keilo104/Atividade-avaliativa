@@ -1,16 +1,17 @@
 import { Passageiro } from "./Passageiro.js";
 import { Reserva } from "./Reserva.js";
+import { Time } from "./Time.js";
 
 export class Voo {
-    private tempo: number;
+    private tempo: Time;
     private milhas: number;
 
-    constructor(tempo: number, milhas: number) {
+    constructor(tempo: Time, milhas: number) {
         this.tempo = tempo;
         this.milhas = milhas;
     }
 
-    public getTempo(): number {
+    public getTempo(): Time {
         return this.tempo;
     }
 

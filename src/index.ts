@@ -2,6 +2,7 @@ import { ContaMilha } from "./Model/ContaMilha.js";
 import { Embarque } from "./Model/Embarque.js";
 import { Passageiro } from "./Model/Passageiro.js";
 import { Reserva } from "./Model/Reserva.js";
+import { Time } from "./Model/Time.js";
 import { Voo } from "./Model/Voo.js";
 
 const contaMilhas01: ContaMilha = new ContaMilha("1234567890", 15000, 1);
@@ -19,15 +20,14 @@ const passageiro3: Passageiro = new Passageiro("Tonyzito", "T09080706", contaMil
 const dataVoo: Date = new Date(2024, 4, 20);
 // console.log(dataVoo);
 
-const tempoVoo: Date = new Date(); 
-const voo1 = new Voo(1, 500); //não soube lidar com o tipo Time, substitui por number pra testar -> precisa arrumar
+const voo1 = new Voo(new Time(1, 0, 0), 500);
 
 const reservaPassageiro1: Reserva = voo1.fazerReserva(dataVoo, passageiro1);
 
 // reservaPassageiro1.reservar();
 reservaPassageiro1.pagar();
 
-const embarquePassageiro1 = new Embarque(13, dataVoo, 4); //não soube lidar com o tipo Time, substitui por number pra testar -> precisa arrumar
+const embarquePassageiro1 = new Embarque(13, dataVoo, new Time(4, 0, 0));
 embarquePassageiro1.iniciarCheckIn();
 embarquePassageiro1.atrasarVoo();
 embarquePassageiro1.embarcarPassageiro(passageiro1);

@@ -1,11 +1,12 @@
 import { Passageiro } from "./Passageiro.js";
+import { Time } from "./Time.js";
 
 export class Embarque {
     private portaoEmbarque: number;
     private data: Date;
-    private tempo: number;
+    private tempo: Time;
 
-    constructor(portaoEmbarque: number, data: Date, tempo: number) {
+    constructor(portaoEmbarque: number, data: Date, tempo: Time) {
         this.portaoEmbarque = portaoEmbarque;
         this.data = data;
         this.tempo = tempo;
@@ -39,7 +40,7 @@ export class Embarque {
         return this.data;
     }
 
-    public getTempo(): number {
+    public getTempo(): Time {
         return this.tempo;
     }
 }
