@@ -22,11 +22,13 @@ export class Reserva {
     }
 
     public pagar(): void {
-        console.log(`Voo pago`);
+        console.log(`Voo pago, ${this.passageiro.getNome()} ganhou milhas.`);
+        this.passageiro.creditarMilhas(this.voo.getMilhas());
     }
 
     public cancelar(): void {
-        console.log(`Voo cancelado`);
+        console.log(`Voo cancelado, ${this.passageiro.getNome()} perdeu milhas.`);
+        this.passageiro.consumirMilhas(this.voo.getMilhas());
     }
 
     public alterar(dataNova: Date): void {

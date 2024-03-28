@@ -1,5 +1,5 @@
-import { ContaMilha } from "./ContaMilha";
-import { Reserva } from "./Reserva";
+import { ContaMilha } from "./ContaMilha.js";
+import { Reserva } from "./Reserva.js";
 
 export class Passageiro {
     private nome: string;
@@ -15,16 +15,16 @@ export class Passageiro {
         this.status = status;
     }
 
-    public creditoMilha(valor: number): void {
+    public creditarMilhas(valor: number): void {
         this.cartaoMilha.creditarMilhas(valor);
-        console.log(`${valor} milhas creditadas para o passageiro ${this.nome}, total: ${this.cartaoMilha.getTotalMilhas}`);
+        console.log(`${valor} milhas creditadas para o passageiro ${this.nome}, total: ${this.cartaoMilha.getTotalMilhas()}`);
     }
 
-    public consumoMilha(valor: number): void {
+    public consumirMilhas(valor: number): void {
         const retorno: boolean = this.cartaoMilha.consumirMilhas(valor);
 
         if (retorno) { 
-            console.log(`${valor} milhas consumidas do passageiro ${this.nome}, total: ${this.cartaoMilha.getTotalMilhas}`);
+            console.log(`${valor} milhas consumidas do passageiro ${this.nome}, total: ${this.cartaoMilha.getTotalMilhas()}`);
         } else {
             console.log(`Não há milhas suficientes para o consumo.`);
         }

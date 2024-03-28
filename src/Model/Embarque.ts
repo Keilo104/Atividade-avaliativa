@@ -1,4 +1,4 @@
-import { Passageiro } from "./Passageiro";
+import { Passageiro } from "./Passageiro.js";
 
 export class Embarque {
     private portaoEmbarque: number;

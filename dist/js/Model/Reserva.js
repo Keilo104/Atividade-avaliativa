@@ -13,10 +13,12 @@ export class Reserva {
         return reserva;
     }
     pagar() {
-        console.log(`Voo pago`);
+        console.log(`Voo pago, ${this.passageiro.getNome()} ganhou milhas.`);
+        this.passageiro.creditarMilhas(this.voo.getMilhas());
     }
     cancelar() {
-        console.log(`Voo cancelado`);
+        console.log(`Voo cancelado, ${this.passageiro.getNome()} perdeu milhas.`);
+        this.passageiro.consumirMilhas(this.voo.getMilhas());
     }
     alterar(dataNova) {
         this.data = dataNova;

@@ -1,5 +1,5 @@
-import { Passageiro } from "./Passageiro";
-import { Reserva } from "./Reserva";
+import { Passageiro } from "./Passageiro.js";
+import { Reserva } from "./Reserva.js";
 
 export class Voo {
     private tempo: number;
