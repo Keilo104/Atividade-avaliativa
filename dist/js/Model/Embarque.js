@@ -2,10 +2,12 @@ export class Embarque {
     portaoEmbarque;
     data;
     tempo;
-    constructor(portaoEmbarque, data, tempo) {
+    voo;
+    constructor(portaoEmbarque, tempo, voo) {
         this.portaoEmbarque = portaoEmbarque;
-        this.data = data;
         this.tempo = tempo;
+        this.voo = voo;
+        this.data = this.voo.getData();
     }
     iniciarCheckIn() {
         console.log(`Check-in no portão ${this.portaoEmbarque} foi iniciado.`);

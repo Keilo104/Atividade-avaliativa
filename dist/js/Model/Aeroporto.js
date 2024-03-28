@@ -3,11 +3,14 @@ export class Aeroporto {
     nome;
     pais;
     taxa;
-    constructor(sigla, nome, pais, taxa) {
+    companhiaAerea;
+    constructor(sigla, nome, pais, taxa, companhiaAerea) {
         this.sigla = sigla;
         this.nome = nome;
         this.pais = pais;
         this.taxa = taxa;
+        this.companhiaAerea = companhiaAerea;
+        companhiaAerea.addAeroporto(this);
     }
     getSigla() {
         return this.sigla;
@@ -20,5 +23,8 @@ export class Aeroporto {
     }
     getTaxa() {
         return this.taxa;
+    }
+    getCompanhiaAerea() {
+        return this.companhiaAerea;
     }
 }

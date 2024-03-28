@@ -1,15 +1,20 @@
 import { Passageiro } from "./Passageiro.js";
 import { Time } from "./Time.js";
+import { Voo } from "./Voo.js";
 
 export class Embarque {
     private portaoEmbarque: number;
     private data: Date;
     private tempo: Time;
 
-    constructor(portaoEmbarque: number, data: Date, tempo: Time) {
+    private voo: Voo;
+
+    constructor(portaoEmbarque: number, tempo: Time, voo: Voo) {
         this.portaoEmbarque = portaoEmbarque;
-        this.data = data;
         this.tempo = tempo;
+        this.voo = voo;
+
+        this.data = this.voo.getData();
     }
 
     public iniciarCheckIn(): void {
