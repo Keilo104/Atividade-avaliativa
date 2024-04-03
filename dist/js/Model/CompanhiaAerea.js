@@ -1,7 +1,7 @@
 export class CompanhiaAerea {
     nome;
     sigla;
-    aeroportoList = new Array();
+    aeroportoArray = new Array();
     constructor(nome, sigla) {
         this.nome = nome;
         this.sigla = sigla;
@@ -13,6 +13,6 @@ export class CompanhiaAerea {
         return this.sigla;
     }
     addAeroporto(aeroporto) {
-        this.aeroportoList.push(aeroporto);
+        this.aeroportoArray.push(aeroporto);
     }
 }

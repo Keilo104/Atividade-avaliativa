@@ -4,7 +4,7 @@ export class CompanhiaAerea {
     private nome: string;
     private sigla: string;
 
-    private aeroportoList: Array<Aeroporto> = new Array<Aeroporto>();
+    private aeroportoArray: Array<Aeroporto> = new Array<Aeroporto>();
 
     constructor(nome: string, sigla: string) {
         this.nome = nome;
@@ -20,6 +20,6 @@ export class CompanhiaAerea {
     }
 
     public addAeroporto(aeroporto: Aeroporto): void {
-        this.aeroportoList.push(aeroporto);
+        this.aeroportoArray.push(aeroporto);
     }
 }
